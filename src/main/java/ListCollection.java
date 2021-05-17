@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class ListCollection {
 
@@ -63,5 +60,35 @@ public class ListCollection {
         Iterator<Integer> iter = intList.iterator();
         while(iter.hasNext()) System.out.print(iter.next() + " ");
     }
+    public void toArrayFunc(){
+        System.out.println("\n\n - toArrayFunction - ");
+        Object[] tempIntList = intList.toArray();
+        for(Object o : tempIntList) System.out.print(o + " ");
+    }
+    public void sortFunc(){
+        System.out.println("\n\n - sort Function - ");
+        //if we want to sort List we need to use Collections.
+        Collections.reverse(intList);
+        System.out.println("sort reverse -> " + intList);
+        Collections.sort(intList);
+        System.out.println("sort asc -> " + intList);
+    }
+    //we can also set some value on the current index using set method on add value on specific index!
+    public void setFunc(Integer index, Integer value){
+        System.out.println("\n\n - set Func - ");
+        Integer tVal = intList.get(index);
+        intList.set(index, value);
+        System.out.println("changed value " + tVal + " to "+value+" (index=" + index + " ) -> " + intList);
+    }
 
+    public void addWithIndex(Integer index, Integer value){
+        System.out.println("\n\n - add with index - ");
+        intList.add(index, value);// we can use only index equals List size + 1
+        System.out.println("added value: " + value + " at index : "+ index + " -> " + intList);
+    }
+    public void clearFunc(){
+        System.out.println("\n - clear function at the end because i need to go sleep");
+        intList.clear();
+        if(intList.isEmpty()) System.out.println("List is empty!");
+    }
 }

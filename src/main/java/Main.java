@@ -20,6 +20,11 @@ public class Main {
         listCollection.removeElementByIndex(10);
         listCollection.containsFunc(5);
         listCollection.iteratorFunc();
+        listCollection.toArrayFunc();
+        listCollection.sortFunc();
+        listCollection.setFunc(5, 11);
+        listCollection.addWithIndex(10, 12);
+        listCollection.clearFunc();
     }
 
 }
