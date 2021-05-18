@@ -2,9 +2,11 @@ import java.util.*;
 
 public class ListCollection {
 
-    // if we want to create new ArrayList our instance should type of interface.
+    // if we want to create new arraylist or linkedList our instance should type of interface.
     public List<Integer> intList = new ArrayList<>();
-
+    // this list it type of LinkedList not List because we want to access to LinkedList methods
+    // and not only for List methods
+    public LinkedList<Integer> linkedIntList = new LinkedList<Integer>();
     public ListCollection(){
 
         System.out.println("- Basic elements of our list -");
@@ -29,6 +31,10 @@ public class ListCollection {
             -   equals
             -   hashCode()
             -   get
+
+        in the linkedList we have additional functions like:
+            getting first and last element. that exist because in the linkedList getting an element is going better than
+            in arrayList so we can also take carefully element from the middle and rechanging list will be faster than others.
      */
     public void addElement(Integer temp){
         System.out.println("\n - adding element - ");
@@ -91,4 +97,31 @@ public class ListCollection {
         intList.clear();
         if(intList.isEmpty()) System.out.println("List is empty!");
     }
+
+    // functions for LinkedList.
+
+    public void addManyToLinkedList(List<Integer> temp){
+        System.out.println("\n\n\n - Linked list - ");
+        linkedIntList.addAll(temp);
+        System.out.println("linkedIntList -> " + linkedIntList);
+    }
+    public void getFirstLastFromLinked(){
+        System.out.println("\n - get first from list - ");
+        Integer res1 = linkedIntList.getFirst();
+        System.out.println("result -> " + res1);
+        Integer res2 = linkedIntList.getLast();
+        System.out.println("result -> " + res2);
+    }
+    //others interesing functions are: peek(), poll()
+    public void peekAndPollLinkedList(){
+        System.out.println("\n - peekAndPollLinkedList - ");
+        //peek retrives but don;t remove first element
+        Integer res1 = linkedIntList.peek();
+        System.out.println("peek() res -> " + res1);
+        // retrives and remove first element of this list
+        Integer res2 = linkedIntList.poll();
+        System.out.println("poll() res - >" + res2);
+        System.out.println("linkedList result -> " + linkedIntList);
+    }
+    //others function are the same.
 }

@@ -25,6 +25,10 @@ public class Main {
         listCollection.setFunc(5, 11);
         listCollection.addWithIndex(10, 12);
         listCollection.clearFunc();
+
+        listCollection.addManyToLinkedList(tempIntStreamList);
+        listCollection.getFirstLastFromLinked();
+        listCollection.peekAndPollLinkedList();
     }
 
 }
