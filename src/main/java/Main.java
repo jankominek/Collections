@@ -39,6 +39,10 @@ public class Main {
         mapCollection.changeValue("fourth element", 4);
         mapCollection.hashToTree();
 
+        SetCollection setCollection = new SetCollection();
+        setCollection.addElementsToHashSet();
+        setCollection.removeAndAddAll();
+
     }
 
 }
