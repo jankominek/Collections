@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SetCollection {
 
@@ -28,8 +29,22 @@ public class SetCollection {
         set.remove("aaa");
         System.out.println("set after -> "+ set);
 
-        set.addAll(Set.of("aaa", "xyzew", "hhhjjii"));
+        set.addAll(Set.of("aaaaaaaa", "xydzew", "hhhjjii"));
         System.out.println("new set -> " + set);
+    }
+
+    public void hashToTreeSet(){
+        System.out.println("\n- hash to treeSet - ");
+        List<Integer> tempList = set.stream().map(SetCollection::strToInt).collect(Collectors.toList());
+        System.out.println("current list -> " + tempList);
+        Set<Integer> newSet = new HashSet<>();
+        tempList.stream().forEach(e -> newSet.add(e));
+        System.out.println("current set -> " + newSet);
+        newSet.stream().collect(Collectors.toCollection(TreeSet::new));
+        System.out.println("new treeSet -> "+ newSet);
+    }
+    private static Integer strToInt(String s){
+            return Integer.valueOf(s.length());
     }
 
 

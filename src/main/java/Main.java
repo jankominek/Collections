@@ -42,6 +42,7 @@ public class Main {
         SetCollection setCollection = new SetCollection();
         setCollection.addElementsToHashSet();
         setCollection.removeAndAddAll();
+        setCollection.hashToTreeSet();
 
     }
 
