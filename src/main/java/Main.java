@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -29,6 +30,15 @@ public class Main {
         listCollection.addManyToLinkedList(tempIntStreamList);
         listCollection.getFirstLastFromLinked();
         listCollection.peekAndPollLinkedList();
+
+
+        Map<String, Integer> mapToAdd = Map.of("third element", 3, "second element", 2, "fourth element", 5);
+        MapCollection mapCollection = new MapCollection();
+        mapCollection.addElementToMap();
+        mapCollection.addAllElementsToMap(mapToAdd);
+        mapCollection.changeValue("fourth element", 4);
+        mapCollection.hashToTree();
+
     }
 
 }
